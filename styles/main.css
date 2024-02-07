@@ -2,7 +2,7 @@
 Project:  ComingSoon template
 Version:  1.0
 Last change:  2.07.2020
-Assigned to:  Pawel Zuchowski
+Assigned to:  
 Primary use:  Free to use under Creative Commons
 -------------------------------------------------------------------*/
 body,
@@ -17,6 +17,7 @@ body,
   margin: 0;
   padding: 0;
   width: 100vw;
+  background-color: #8431B0;
 }
 
 p:not(.slogan),
@@ -28,6 +29,15 @@ h1,
 .mainInfo {
   width: auto;
 }
+
+img {
+  height: 200px;
+  width: 200px;
+  margin-left: 32px;
+  margin-bottom: 32px;
+}
+
+
 
 .container .row .left-wrap {
   padding-right: 0;
@@ -115,9 +125,25 @@ h1,
   }
 }
 
+h1 {
+  color: white;
+
+  /* Heading/H1/Bold */
+  font-family: Manrope;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 76.8px */
+
+  background: linear-gradient(88deg, #FFF 26.78%, #F2B771 45.48%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .container .right .mainInfo h1 {
-  font-size: 2em;
-  margin-left: 1em;
+  /* font-size: 2em; */
+  margin-left: 32px;
 }
 
 @media screen and (max-width: 576px) {
@@ -129,7 +155,7 @@ h1,
 .container .right .mainInfo .slogan {
   width: 50vw;
   margin-top: 1.5em;
-  color: #6d6464;
+  color: #fafafa64;
 }
 
 @media screen and (max-width: 576px) {
@@ -140,6 +166,7 @@ h1,
 
 .container .right .mainInfo .form-subscribe {
   margin-top: 0.5em;
+  display: flex;
 }
 
 @media screen and (max-width: 576px) {
@@ -148,34 +175,71 @@ h1,
   }
 }
 
+.input.form {
+  color: var(--Neutral-White, #FAFAFA);
+}
+
+::placeholder {
+  color: var(--Neutral-White, #FAFAFA);
+  opacity: 0.64; /* Firefox */
+}
+
 .container .right .mainInfo .form-subscribe .form {
-  height: 40px;
+  width: 417px;
+  height: 62px;
+  /* height: 40px;
   padding: 0;
   margin-right: -6px;
   border: 1px solid black;
   border-right: none;
-  padding-left: 0.5em;
+  padding-left: 0.5em; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+  border-radius: 20px;
+  /* Shadow S */
+  box-shadow: 0px 0px 48px 0px rgba(41, 45, 50, 0.04);
+  padding: 4px 4px 4px 16px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
 }
 
+
 .container .right .mainInfo .form-subscribe button {
-  width: 120px;
-  height: 40px;
-  border: 1px solid black;
-  border-top: 2px solid black;
-  border-radius: 0 25px 25px 0;
-  padding: 0;
-  color: white;
-  background-color: black;
+  display: flex;
+  padding: 14px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  right: 158px;
+  border-radius: 24px;
+  border: 1px solid var(--Button-Primary-stroke, #FF9C0F);
+  background: var(--Button-Primary, linear-gradient(180deg, #FFAD38 0%, #FF9805 100%));
+}
+
+.submit-btn {
+  width: 150px;
+  margin: 4px;
+}
+
+input:focus {
+ 
 }
 
 @media screen and (max-width: 576px) {
   .container .right .mainInfo .form-subscribe button {
-    width: 100px;
+    width: 150px;
   }
 }
 
 .container .right .mainInfo .form-subscribe button:hover {
   cursor: pointer;
+  /* position: absolute; */
 }
 
 .container .right .icon-list {
@@ -227,7 +291,7 @@ h1,
 .slogan,
 button,
 .form {
-  font-family: "Lato", sans-serif;
+  font-family: "Manrope", "Lato", sans-serif;
 }
 
 .slogan,
