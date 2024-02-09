@@ -42,12 +42,14 @@ img {
 .container .row .left-wrap {
   padding-right: 0;
   padding-left: 0;
-  -webkit-filter: drop-shadow(15px 0px 10px rgba(50, 50, 0, 0.5));
-  filter: drop-shadow(15px 0px 10px rgba(50, 50, 0, 0.5));
+  -webkit-filter: drop-shadow(45px 0px 50px rgba(50, 50, 0, 0.4));
+  filter: drop-shadow(45px 0px 50px rgba(50, 50, 0, 0.4));
+
+  
 }
 
 .container .row .left-wrap .left {
-  background-image: url(../img/247.jpg);
+  background-image: url(../img/compressed-genie-lamp-in-cave---holding-image.jpg);
   background-repeat: no-repeat;
   background-position: 50% 100%;
   height: 100vh;
@@ -56,13 +58,14 @@ img {
   align-items: center;
   -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+  background-size: cover;
 }
 
 @media screen and (max-width: 576px) {
   .container .row .left-wrap .left {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
-    height: 50vh;
+    height: 40vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
@@ -106,10 +109,11 @@ img {
 
 @media screen and (max-width: 576px) {
   .container .right {
-    height: 50vh;
+    /* height: 50vh; */
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    overflow: hidden;
   }
 }
 
@@ -122,6 +126,15 @@ img {
 @media screen and (max-width: 576px) {
   .container .right .mainInfo {
     text-align: center;
+    width: 100%;
+  }
+  .container .right .mainInfo h1 {
+    font-size: 2em;
+  }
+  #logo {
+    align-self: center;
+    margin-left: 0px;
+    margin-bottom: 0px;
   }
 }
 
@@ -146,16 +159,36 @@ h1 {
   margin-left: 32px;
 }
 
+
+.container .right .mainInfo .slogan {
+  /* width: 50vw; */
+  margin: 32px;
+  /* margin-top: 1.5em; */
+  color: #fafafa64;
+}
+
+
+
+
+form.form-subscribe {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+
+/* mobile */
+
 @media screen and (max-width: 576px) {
   .container .right .mainInfo h1 {
     margin-left: 0;
   }
-}
-
-.container .right .mainInfo .slogan {
-  width: 50vw;
-  margin-top: 1.5em;
-  color: #fafafa64;
+  .mainInfo {
+    align-items: center;
+  }
+  ul.icon-list {
+    margin: 3em;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -185,7 +218,7 @@ h1 {
 }
 
 .container .right .mainInfo .form-subscribe .form {
-  width: 417px;
+  width: 100%;
   height: 62px;
   /* height: 40px;
   padding: 0;
@@ -215,8 +248,8 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  position: relative;
-  right: 158px;
+  position: absolute;
+  right: 0px;
   border-radius: 24px;
   border: 1px solid var(--Button-Primary-stroke, #FF9C0F);
   background: var(--Button-Primary, linear-gradient(180deg, #FFAD38 0%, #FF9805 100%));
@@ -268,7 +301,7 @@ input:focus {
 }
 
 .container .right .icon-list .icon a {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
